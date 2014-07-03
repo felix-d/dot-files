@@ -6,6 +6,10 @@
 #*
 *#*
 *~
+.saved-places
+.recentf
+.projectile
+.org-id-locations
 .emacs.d/auto-save-list/
 .emacs.d/backups/
 .emacs.d/projectile.cache
