@@ -4,6 +4,7 @@
 #.*
 .emacs.d/eshell
 #*
+*#*
 *~
 .emacs.d/auto-save-list/
 .emacs.d/backups/
