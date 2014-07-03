@@ -6,6 +6,5 @@
 (add-hook 'prog-mode-hook 'turn-on-evil-mode)
 (add-hook 'comint-mode-hook 'turn-on-evil-mode)
 (add-hook 'Info-mode-hook 'turn-off-evil-mode)
-(define-key evil-insert-state-map "§" 'evil-force-normal-state)
 (key-chord-define evil-insert-state-map "jk" 'evil-force-normal-state)
 (provide 'evil-setup)
