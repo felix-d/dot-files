@@ -1,5 +1,6 @@
 let g:ycm_key_list_select_completion=[]
 let g:ycm_key_list_previous_completion=[]
+inoremap <D-Space> <C-n>
 let g:acp_enableAtStartup = 0
 
 " enable completion from tags

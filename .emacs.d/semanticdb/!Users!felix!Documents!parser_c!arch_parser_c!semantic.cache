@@ -1,0 +1,603 @@
+;; Object arch_parser_c/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "arch_parser_c/"
+  :tables
+  (list
+    (semanticdb-table "tp1.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [555 573])
+            ("stdlib.h" include (:system-flag t) nil [574 593])
+            ("string.h" include (:system-flag t) nil [594 613])
+            ("tp1_debug" variable (:constant-flag t) nil [825 834])
+            ("TRUE" variable (:constant-flag t) nil [867 871])
+            ("FALSE" variable (:constant-flag t) nil [882 887])
+            ("CHIFFRES" variable (:constant-flag t) nil [898 906])
+            ("yes_syntaxe" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :default-value "\"ERREUR DE SYNTAXE DANS L’EXPRESSION: \""
+                :type "char")
+                nil [920 987])
+            ("no_syntaxe" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :default-value "\"Une erreur est survenue lors du traîtement de l'expression: \""
+                :type "char")
+                nil [988 1077])
+            ("FREE_PTR" variable (:constant-flag t) nil [1104 1112])
+            ("addition" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1537 1547])
+                    ("gauche" variable (:type "double") (reparse-symbol arg-sub-list) [1548 1562])
+                    ("droite" variable (:type "double") (reparse-symbol arg-sub-list) [1563 1577])
+                    ("resultat" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1578 1595]))                  
+                :type "bool")
+                nil [1523 1596])
+            ("soustraction" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1615 1625])
+                    ("gauche" variable (:type "double") (reparse-symbol arg-sub-list) [1626 1640])
+                    ("droite" variable (:type "double") (reparse-symbol arg-sub-list) [1641 1655])
+                    ("resultat" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1656 1673]))                  
+                :type "bool")
+                nil [1597 1674])
+            ("multiplication" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1695 1705])
+                    ("gauche" variable (:type "double") (reparse-symbol arg-sub-list) [1706 1720])
+                    ("droite" variable (:type "double") (reparse-symbol arg-sub-list) [1721 1735])
+                    ("resultat" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1736 1753]))                  
+                :type "bool")
+                nil [1675 1754])
+            ("division" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1769 1779])
+                    ("gauche" variable (:type "double") (reparse-symbol arg-sub-list) [1780 1794])
+                    ("droite" variable (:type "double") (reparse-symbol arg-sub-list) [1795 1809])
+                    ("resultat" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1810 1827]))                  
+                :type "bool")
+                nil [1755 1828])
+            ("t_op_funct" function
+               (:prototype-flag t
+                :function-pointer t
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1913 1923])
+                    ("gauche" variable (:type "double") (reparse-symbol arg-sub-list) [1924 1938])
+                    ("droite" variable (:type "double") (reparse-symbol arg-sub-list) [1939 1953])
+                    ("resultat" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1954 1971]))                  
+                :type "bool")
+                nil [1894 1972])
+            ("_op" type
+               (:members 
+                  ( ("symbole" variable (:type "char") (reparse-symbol classsubparts) [2035 2048])
+                    ("precedence" variable (:type "char") (reparse-symbol classsubparts) [2053 2069])
+                    ("dependance" variable (:type "char") (reparse-symbol classsubparts) [2074 2090])
+                    ("funct" variable (:type ("t_op_funct" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2095 2112]))                  
+                :type "struct")
+                nil [2010 2120])
+            ("t_op" type
+               (:typedef ("_op" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [2010 2120])
+            ("_str" type
+               (:members 
+                  ( ("alloc" variable (:type "int") (reparse-symbol classsubparts) [2194 2204])
+                    ("util" variable (:type "int") (reparse-symbol classsubparts) [2209 2218])
+                    ("str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [2223 2233]))                  
+                :type "struct")
+                nil [2168 2242])
+            ("t_str" type
+               (:typedef ("_str" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [2168 2242])
+            ("_expr" type
+               (:members 
+                  ( ("type" variable (:type ("" type
+                         (:members 
+                            ( ("OP" variable
+                                 (:constant-flag t
+                                  :default-value (2383 2384)
+                                  :type "int")
+                                  (reparse-symbol enumsubparts) [2378 2384])
+                              ("NOMBRE" variable
+                                 (:constant-flag t
+                                  :type "int")
+                                  (reparse-symbol enumsubparts) [2391 2401]))                            
+                          :type "enum")
+                          nil nil)) (reparse-symbol classsubparts) [2367 2407])
+                    ("_" variable (:type ("" type
+                         (:members 
+                            ( ("nombre" variable (:type ("" type
+                                   (:members 
+                                      ( ("ptr" variable
+                                           (:pointer 1
+                                            :type "char")
+                                            (reparse-symbol classsubparts) [2437 2447])
+                                        ("len" variable (:type "int") (reparse-symbol classsubparts) [2454 2463]))                                      
+                                    :type "struct")
+                                    nil nil)) (reparse-symbol classsubparts) [2422 2477])
+                              ("op" variable (:type ("" type
+                                   (:members 
+                                      ( ("op" variable
+                                           (:pointer 1
+                                            :type ("t_op" type (:type "class") nil nil))
+                                            (reparse-symbol classsubparts) [2497 2506])
+                                        ("gauche" variable
+                                           (:pointer 1
+                                            :type ("_expr" type
+                                                 (:prototype t
+                                                  :type "struct")
+                                                  nil nil))
+                                            (reparse-symbol classsubparts) [2513 2534])
+                                        ("droite" variable
+                                           (:pointer 1
+                                            :type ("_expr" type
+                                                 (:prototype t
+                                                  :type "struct")
+                                                  nil nil))
+                                            (reparse-symbol classsubparts) [2541 2562]))                                      
+                                    :type "struct")
+                                    nil nil)) (reparse-symbol classsubparts) [2482 2572]))                            
+                          :type "union")
+                          nil nil)) (reparse-symbol classsubparts) [2410 2579]))                  
+                :type "struct")
+                nil [2282 2589])
+            ("t_expr" type
+               (:typedef ("_expr" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [2282 2589])
+            ("t_ASA" type
+               (:typedef ("t_expr" type (:type "class") nil nil)
+                :type "typedef")
+                nil [2591 2612])
+            ("t_pile_termes" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("alloc" variable (:type "int") (reparse-symbol classsubparts) [2663 2673])
+                          ("util" variable (:type "int") (reparse-symbol classsubparts) [2707 2716])
+                          ("termes" variable
+                             (:pointer 2
+                              :type ("t_expr" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [2755 2771]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [2642 2788])
+            ("t_error_id" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("NO_ERROR_YET" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [2809 2822])
+                          ("MISSING_RIGHT_TERM" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [2827 2846])
+                          ("MISSING_LEFT_TERM" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [2851 2869])
+                          ("UNKNOWN_CHARACTER" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [2874 2892])
+                          ("TOO_MANY_TERMS" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [2897 2912])
+                          ("MEMORY_ERROR" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [2917 2930])
+                          ("MEMORY_ERROR_STR" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [2935 2952])
+                          ("MEMORY_ERROR_EXPR" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [2957 2975])
+                          ("DIVIDE_BY_ZERO" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [2980 2995])
+                          ("NOTHING_TO_PROCESS" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [3000 3020]))                        
+                      :type "enum")
+                      nil nil)
+                :type "typedef")
+                nil [2790 3032])
+            ("t_contexte_execution" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("entree" variable
+                             (:pointer 1
+                              :type ("FILE" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [3137 3159])
+                          ("expression" variable
+                             (:pointer 1
+                              :type ("t_str" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [3162 3188])
+                          ("pile_termes" variable (:type ("t_pile_termes" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3191 3217])
+                          ("ASA" variable
+                             (:pointer 1
+                              :type ("t_ASA" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [3220 3239])
+                          ("erreur" variable (:type ("" type
+                               (:members 
+                                  ( ("id" variable (:type ("t_error_id" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3255 3270])
+                                    ("msg" variable
+                                       (:pointer 1
+                                        :type "char")
+                                        (reparse-symbol classsubparts) [3275 3292])
+                                    ("ligne" variable (:type "int") (reparse-symbol classsubparts) [3297 3315])
+                                    ("syntaxe" variable
+                                       (:pointer 1
+                                        :type "char")
+                                        (reparse-symbol classsubparts) [3320 3341]))                                  
+                                :type "struct")
+                                nil nil)) (reparse-symbol classsubparts) [3242 3353])
+                          ("resultat" variable (:type "double") (reparse-symbol classsubparts) [3357 3380]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [3118 3404])
+            ("liste_op" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "{ 
+    {'+', 0x00, FALSE, addition}, 
+    {'-', 0x00, TRUE, soustraction}, 
+    {'*', 0x01, FALSE, multiplication}, 
+    {'/', 0x01, TRUE, division} 
+}"
+                :type ("t_op" type (:type "class") nil nil))
+                nil [3662 3839])
+            ("postscript_op" variable
+               (:pointer 1
+                :dereference 1
+                :typemodifiers ("static")
+                :default-value "{\"add\", \"sub\", \"mul\", \"div\"}"
+                :type "char")
+                nil [3873 3933])
+            ("DEBUG_STACK" variable (:constant-flag t) nil [4239 4250])
+            ("DEBUG_STRING" variable (:constant-flag t) nil [4270 4282])
+            ("DEBUG_EXPR" variable (:constant-flag t) nil [4443 4453])
+            ("type_op" function
+               (:pointer 1
+                :arguments 
+                  ( ("c" variable (:type "char") (reparse-symbol arg-sub-list) [5676 5683]))                  
+                :type ("t_op" type (:type "class") nil nil))
+                nil [5662 5848])
+            ("affecter_erreur" function
+               (:arguments 
+                  ( ("id" variable (:type ("t_error_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6433 6447])
+                    ("ctx" variable
+                       (:pointer 1
+                        :type ("t_contexte_execution" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6448 6474])
+                    ("ligne" variable (:type "int") (reparse-symbol arg-sub-list) [6475 6485]))                  
+                :type "void")
+                nil [6412 7645])
+            ("rapporter_erreur" function
+               (:arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type ("t_contexte_execution" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8032 8058]))                  
+                :type "void")
+                nil [8010 8935])
+            ("liberer_expr" function
+               (:arguments 
+                  ( ("p" variable
+                       (:pointer 2
+                        :type ("t_expr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9457 9468]))                  
+                :type "void")
+                nil [9439 10005])
+            ("push_pile_termes" function
+               (:arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type ("t_contexte_execution" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11554 11580])
+                    ("noeud" variable
+                       (:pointer 1
+                        :type ("t_expr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11581 11595]))                  
+                :type "bool")
+                nil [11532 12476])
+            ("pop_pile_termes" function
+               (:arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type ("t_contexte_execution" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12821 12847])
+                    ("noeud" variable
+                       (:pointer 2
+                        :type ("t_expr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12848 12863]))                  
+                :type "bool")
+                nil [12800 13241])
+            ("vider_pile_termes" function
+               (:arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type ("t_contexte_execution" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13592 13618]))                  
+                :type "void")
+                nil [13569 13740])
+            ("alloc_str" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type ("t_contexte_execution" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14480 14506])
+                    ("taille" variable (:type "long") (reparse-symbol arg-sub-list) [14507 14519])
+                    ("str" variable
+                       (:pointer 2
+                        :type ("t_str" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14520 14532])
+                    ("ligne" variable (:type "int") (reparse-symbol arg-sub-list) [14533 14543])
+                    ("etendre" variable (:type "bool") (reparse-symbol arg-sub-list) [14544 14557]))                  
+                :type "bool")
+                nil [14458 14973])
+            ("liberer_str" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("str" variable
+                       (:pointer 2
+                        :type ("t_str" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15285 15297]))                  
+                :type "void")
+                nil [15261 15344])
+            ("lire_expression_postfix" function
+               (:arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type ("t_contexte_execution" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15696 15722])
+                    ("stream" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15723 15736]))                  
+                :type "bool")
+                nil [15667 16714])
+            ("init_contexte" function
+               (:arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type ("t_contexte_execution" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17325 17351]))                  
+                :type "void")
+                nil [17306 17575])
+            ("liberer_var_allouee_contexte" function
+               (:arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type ("t_contexte_execution" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17996 18022]))                  
+                :type "void")
+                nil [17962 18187])
+            ("addition" function
+               (:arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [19171 19181])
+                    ("gauche" variable (:type "double") (reparse-symbol arg-sub-list) [19182 19196])
+                    ("droite" variable (:type "double") (reparse-symbol arg-sub-list) [19197 19211])
+                    ("resultat" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [19212 19229]))                  
+                :type "bool")
+                nil [19157 19279])
+            ("soustraction" function
+               (:arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [19629 19639])
+                    ("gauche" variable (:type "double") (reparse-symbol arg-sub-list) [19640 19654])
+                    ("droite" variable (:type "double") (reparse-symbol arg-sub-list) [19655 19669])
+                    ("resultat" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [19670 19687]))                  
+                :type "bool")
+                nil [19611 19741])
+            ("multiplication" function
+               (:arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [20092 20102])
+                    ("gauche" variable (:type "double") (reparse-symbol arg-sub-list) [20103 20117])
+                    ("droite" variable (:type "double") (reparse-symbol arg-sub-list) [20118 20132])
+                    ("resultat" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [20133 20150]))                  
+                :type "bool")
+                nil [20072 20204])
+            ("division" function
+               (:arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [20544 20554])
+                    ("gauche" variable (:type "double") (reparse-symbol arg-sub-list) [20555 20569])
+                    ("droite" variable (:type "double") (reparse-symbol arg-sub-list) [20570 20584])
+                    ("resultat" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [20585 20602]))                  
+                :type "bool")
+                nil [20530 20754])
+            ("ajouter_parentheses" function
+               (:arguments 
+                  ( ("parent" variable
+                       (:pointer 1
+                        :type ("t_expr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21434 21449])
+                    ("gauche" variable
+                       (:pointer 1
+                        :type ("t_expr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21476 21491])
+                    ("parenthese_gauche" variable
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [21518 21542])
+                    ("droite" variable
+                       (:pointer 1
+                        :type ("t_expr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21569 21584])
+                    ("parenthese_droite" variable
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [21611 21635]))                  
+                :type "void")
+                nil [21409 22148])
+            ("printScheme" function
+               (:arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("t_expr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22465 22475]))                  
+                :type "void")
+                nil [22448 22696])
+            ("printC" function
+               (:arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("t_expr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22998 23008]))                  
+                :type "void")
+                nil [22986 23510])
+            ("printPostscript" function
+               (:arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("t_expr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23839 23849]))                  
+                :type "void")
+                nil [23818 24077])
+            ("evaluer_expression" function
+               (:arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type ("t_contexte_execution" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24495 24521])
+                    ("p" variable
+                       (:pointer 1
+                        :type ("t_expr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24522 24532])
+                    ("result" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [24533 24548]))                  
+                :type "bool")
+                nil [24471 25326])
+            ("rapporter_expressions" function
+               (:arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type ("t_contexte_execution" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25659 25685]))                  
+                :type "void")
+                nil [25632 25940])
+            ("convertir_expression_en_ASA" function
+               (:arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type ("t_contexte_execution" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26375 26401]))                  
+                :type "bool")
+                nil [26342 29075])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [29265 29274])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [29275 29287]))                  
+                :type "int")
+                nil [29256 30120]))          
+      :file "tp1.c"
+      :pointmax 30121
+      :fsize 30252
+      :lastmodtime '(21429 42435 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TRUE" . ((number "1" 872 . 873)))
+          ("CHIFFRES" . ((string "\"0123456789\"" 907 . 919)))
+          ("FALSE" . ((number "0" 888 . 889)))
+          ("tp1_debug" . ((number "1" 835 . 836)))
+          ("DEBUG_STACK" (spp-arg-list ("s") 4250 . 4253))
+          ("FREE_PTR" (spp-arg-list ("x") 1112 . 1115) . 
+              ((IF "if" 1122 . 1124) (semantic-list "(x)" 1125 . 1128) (semantic-list "{ \\
+        free(x); \\
+        x = NULL; \\
+    }" 1129 . 1177)))
+          ("DEBUG_STRING" (spp-arg-list ("x") 4282 . 4285) . 
+              ((symbol "printf" 4290 . 4296) (semantic-list "(\"%s->alloc:%ld\\n\", #x, x->alloc)" 4296 . 4329) (punctuation ";" 4329 . 4330) (symbol "printf" 4335 . 4341) (semantic-list "(\"%s->util :%ld\\n\", #x, x->util)" 4341 . 4373) (punctuation ";" 4373 . 4374) (symbol "printf" 4379 . 4385) (semantic-list "(\"%s->str  :%s\\n\", #x, x->str ? x->str : \"NULL\")" 4385 . 4433)))
+          ("DEBUG_EXPR" (spp-arg-list ("x") 4453 . 4456) . 
+              ((IF "if" 4461 . 4463) (semantic-list "(x->type == OP)" 4464 . 4479) (semantic-list "{ \\
+    printf(\"  type: OP\\n\"); \\
+    printf(\"    op: %c\\n\", x->_.op.op->symbole); \\
+    printf(\"gauche: %p\\n\", x->_.op.gauche); \\
+    printf(\"droite: %p\\n\", x->_.op.droite); \\
+  }" 4480 . 4660) (ELSE "else" 4661 . 4665) (IF "if" 4666 . 4668) (semantic-list "(x->type == NOMBRE)" 4669 . 4688) (semantic-list "{ \\
+    printf(\"  type: NOMBRE\\n\"); \\
+    printf(\"nombre: %.*s\\n\", x->_.nombre.len, x->_.nombre.ptr); \\
+  }" 4689 . 4796) (ELSE "else" 4797 . 4801) (semantic-list "{ \\
+    printf(\"  type: %c\\n\", x->type); \\
+  }" 4802 . 4848)))
+          )
+))
+  :file "!Users!felix!Documents!parser_c!arch_parser_c!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

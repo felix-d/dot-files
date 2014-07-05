@@ -12,7 +12,8 @@ source ~/.zsh/hitch.zsh
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-
+export PATH="/usr/local/Cellar:$PATH"
+alias ctags="`brew --prefix`/bin/ctags"
 precmd() {
   if [[ -n "$TMUX" ]]; then
     tmux setenv "$(tmux display -p 'TMUX_PWD_#D')" "$PWD"

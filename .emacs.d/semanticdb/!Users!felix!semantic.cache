@@ -1,0 +1,31 @@
+;; Object felix/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "felix/"
+  :tables
+  (list
+    (semanticdb-table "test.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("a" variable nil nil [12 17])
+            ("b" variable nil nil [18 23])
+            ("test" function (:arguments 
+              ( ("arg1" variable nil (reparse-symbol function_parameters) [35 39])
+                ("arg2" variable nil (reparse-symbol function_parameters) [41 45]))              ) nil [26 72]))          
+      :file "test.py"
+      :pointmax 76
+      :fsize 113
+      :lastmodtime '(21430 46202 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "test.js"
+      :major-mode 'js-mode
+      :tags 
+        '( ("a" variable (:default-value "2") nil [1 11]))          
+      :file "test.js"
+      :pointmax 14
+      :fsize 13
+      :lastmodtime '(21431 18582 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!felix!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

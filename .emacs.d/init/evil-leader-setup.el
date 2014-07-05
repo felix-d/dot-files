@@ -1,15 +1,18 @@
 (evil-leader/set-leader "<SPC>")
 (unless (featurep 'helm)
   (evil-leader/set-key
-    "e" 'find-file
+    "d" 'find-file
     "b" 'switch-to-buffer))
 (eval-after-load "helm"
   (evil-leader/set-key
     "f" 'helm-for-files
     "c" 'ace-jump-char-mode
+    "e" 'eshell
     "l" 'ace-jump-line-mode
     "g" 'helm-find-files
-    "b" 'helm-buffers-list))
+    "b" 'helm-buffers-list
+    "p" 'helm-projectile
+))
 (eval-after-load "expand-region"
   (progn
     (setq expand-region-contract-fast-key "z")

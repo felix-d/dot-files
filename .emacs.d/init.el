@@ -9,6 +9,7 @@
   (normal-top-level-add-subdirs-to-load-path))
 (let ((default-directory "/usr/local/share/emacs/site-lisp"))
   (normal-top-level-add-subdirs-to-load-path))
+(require 'evil-nerd-commenter)
 (require 'cl)
 (require 'advice)
 (require 'functions)
@@ -28,9 +29,10 @@
 (require 'org-mode-setup)
 (require 'projectile-setup)
 (require 'sr-speedbar)
+(require 'evil-surround)
 (require 'evil-setup)
 (require 'evil-leader-setup)
-(global-set-key (kbd "s-s") 'sr-speedbar-toggle)
+(require 'evil-nerd-commenter-setup)
 (require 'misc)
 
 
