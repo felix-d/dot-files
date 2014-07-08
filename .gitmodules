@@ -1,6 +1,9 @@
 [submodule ".vim/bundle/YouCompleteMe"]
 	path = .vim/bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule ".vim/bundle/HTML-AutoCloseTag"]
+  path = .vim/bundle/HTML-AutoCloseTag
+	url = https://github.com/amirh/HTML-AutoCloseTag.git
 [submodule ".vim/bundle/color_highlight"]
 	path = .vim/bundle/color_highlight
 	url = https://github.com/chrisbra/color_highlight.git
