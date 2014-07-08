@@ -1,15 +1,16 @@
-let g:ycm_key_list_select_completion=[]
-let g:ycm_key_list_previous_completion=[]
-inoremap <D-Space> <C-n>
+" let g:ycm_key_list_select_completion=[]
+" let g:ycm_key_list_previous_completion=[]
+" inoremap <D-Space> <C-n>
 let g:acp_enableAtStartup = 0
 
 " enable completion from tags
 let g:ycm_collect_identifiers_from_tags_files = 1
 
 " remap Ultisnips for compatibility for YCM
-let g:UltiSnipsExpandTrigger = '<Tab>'
+let g:UltiSnipsExpandTrigger = '<C-j>'
 let g:UltiSnipsJumpForwardTrigger = '<C-j>'
 let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
+
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
