@@ -1,5 +1,11 @@
 syntax enable
+syntax on
+let g:rehash256 = 1
+set guifont=Monaco:h13
+colorscheme molokai
+
 inoremap jk <Esc>
+inoremap kj <Esc>
 inoremap qw <Esc>
 noremap j gj
 noremap k gk
@@ -52,7 +58,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 so ~/.vim/config/bundles.vim
-so ~/.vim/config/colors.vim
+" so ~/.vim/config/colors.vim
 so ~/.vim/config/ctrlp.vim
 so ~/.vim/config/completion.vim
 so ~/.vim/config/watch.vim
@@ -65,11 +71,7 @@ map <leader>nf :NERDTreeFind<cr>
 set ttimeout
 set ttimeoutlen=250
 set notimeout
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-
+"
 "CURSOR FIX FOR TERMINAL VIM
 if exists('$ITERM_PROFILE')
   if exists('$TMUX')
@@ -97,6 +99,11 @@ set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set backupskip=/tmp/*,/private/tmp/*
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
-map <leader>s :SlimuxREPLSendLine<CR>
-vmap <Leader>s :SlimuxREPLSendSelection<CR><Leader>s :SlimuxREPLSendLine<CR>
-vmap <Leader>s :SlimuxREPLSendSelection<CR>
+map <Leader>ss :SlimuxREPLSendLine<CR>
+vmap <Leader>ss :SlimuxREPLSendSelection<CR>
+map <Leader>sl :SlimuxShellLast<CR>
+map <Leader>sp :SlimuxShellPrompt<CR>
+map <Leader>sk :SlimuxSendKeysLast<CR>
+map <Leader>sc :SlimuxREPLConfigure<CR>
+" map <leader>sb ggVG:SlimuxREPLSendSelection<CR><C-o><C-o>
+map <Leader>sb :SlimuxREPLSendBuffer<CR>

@@ -2,7 +2,6 @@
 "COLORS
 set background=dark
 colorscheme base16-railscasts
-set guifont=Monaco:h13
 highlight clear SignColumn
 highlight VertSplit    ctermbg=236
 highlight ColorColumn  ctermbg=237
