@@ -5,8 +5,10 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'chriskempson/base16-vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'epeli/slimux'
+Bundle 'noah/vim256-color'
 Bundle 'majutsushi/tagbar'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'skammer/vim-css-color'
@@ -29,10 +31,12 @@ Bundle 'elzr/vim-json'
 Bundle 'tpope/vim-surround'
 Bundle 'amdt/vim-niji'
 Bundle 'lilydjwg/colorizer'
+Bundle 'rking/ag.vim'
+Bundle 'ervandew/supertab'
 
 "JavaScript
 Bundle 'jelera/vim-javascript-syntax'
-Bundle 'vim-scripts/JavaScript-Indent'
+Bundle 'pangloss/vim-javascript'
 Bundle 'maksimr/vim-jsbeautify'
 Bundle 'othree/javascript-libraries-syntax.vim'
 Bundle 'marijnh/tern_for_vim'
@@ -46,6 +50,7 @@ Bundle 'hail2u/vim-css3-syntax'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tacahiroy/ctrlp-funky'
 Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'kana/vim-smartinput'
 
 call vundle#end()            " required
 filetype plugin indent on    " required

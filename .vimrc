@@ -1,12 +1,11 @@
+
 syntax enable
 syntax on
-let g:rehash256 = 1
 set guifont=Monaco:h13
-colorscheme molokai
 
 inoremap jk <Esc>
-inoremap kj <Esc>
-inoremap qw <Esc>
+imap ` <Esc>
+set pastetoggle=<f6>
 noremap j gj
 noremap k gk
 nmap <leader>w :w!<cr>
@@ -58,7 +57,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 so ~/.vim/config/bundles.vim
-" so ~/.vim/config/colors.vim
+so ~/.vim/config/colors.vim
 so ~/.vim/config/ctrlp.vim
 so ~/.vim/config/completion.vim
 so ~/.vim/config/watch.vim
@@ -91,7 +90,7 @@ let g:pymode_lint_on_fly = 1
 
 "Config syntastic
 let g:syntastic_enable_signs=1
-let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['jslint']
 
 "Backup config
 set backup
@@ -107,3 +106,9 @@ map <Leader>sk :SlimuxSendKeysLast<CR>
 map <Leader>sc :SlimuxREPLConfigure<CR>
 " map <leader>sb ggVG:SlimuxREPLSendSelection<CR><C-o><C-o>
 map <Leader>sb :SlimuxREPLSendBuffer<CR>
+
+color molokai256
+hi Special         ctermfg=81  ctermbg=234
+hi Normal          ctermfg=252 ctermbg=234
+inoremap <silent> <C-k> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
+
