@@ -1,5 +1,3 @@
-
-syntax enable
 syntax on
 set guifont=Monaco:h13
 
@@ -57,7 +55,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 so ~/.vim/config/bundles.vim
-so ~/.vim/config/colors.vim
+" so ~/.vim/config/colors.vim
 so ~/.vim/config/ctrlp.vim
 so ~/.vim/config/completion.vim
 so ~/.vim/config/watch.vim
@@ -107,8 +105,15 @@ map <Leader>sc :SlimuxREPLConfigure<CR>
 " map <leader>sb ggVG:SlimuxREPLSendSelection<CR><C-o><C-o>
 map <Leader>sb :SlimuxREPLSendBuffer<CR>
 
-color molokai256
-hi Special         ctermfg=81  ctermbg=234
-hi Normal          ctermfg=252 ctermbg=234
-inoremap <silent> <C-k> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
+" hi Special         ctermfg=81  ctermbg=234
+" hi Normal          ctermfg=252 ctermbg=234
+inoremap <silent> <C-k> <Esc>/[)}\steC<"'\]>]<CR>:nohl<CR>a
+color wombat256mod
 
+let g:yankstack_map_keys = 0
+nmap <C-]> <Plug>yankstack_substitute_newer_paste
+nmap <C-[> <Plug>yankstack_substitute_older_paste
+nmap <CR> o<Esc>
+" Let me fix CR behavior bith brackets, now it 
+" works with both completion and brackets
+imap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-j>"

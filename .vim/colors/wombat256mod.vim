@@ -29,8 +29,8 @@ hi Folded		ctermfg=103		ctermbg=237		cterm=none		guifg=#a0a8b0	guibg=#3a4046	gui
 hi Title		ctermfg=230						cterm=bold		guifg=#ffffd7					gui=bold
 hi StatusLine	ctermfg=230		ctermbg=238		cterm=none		guifg=#ffffd7	guibg=#444444	gui=italic
 hi VertSplit	ctermfg=238		ctermbg=238		cterm=none		guifg=#444444	guibg=#444444	gui=none
-hi StatusLineNC	ctermfg=241		ctermbg=238		cterm=none		guifg=#857b6f	guibg=#444444	gui=none
-hi LineNr		ctermfg=241		ctermbg=232		cterm=none		guifg=#857b6f	guibg=#080808	gui=none
+hi StatusLineNC	ctermfg=241		ctermbg=234		cterm=none		guifg=#857b6f	guibg=#444444	gui=none
+hi LineNr		ctermfg=241		ctermbg=234		cterm=none		guifg=#857b6f	guibg=#080808	gui=none
 hi SpecialKey	ctermfg=241		ctermbg=235		cterm=none		guifg=#626262	guibg=#2b2b2b	gui=none
 hi WarningMsg	ctermfg=203										guifg=#ff5f55
 hi ErrorMsg		ctermfg=196		ctermbg=236		cterm=bold		guifg=#ff2026	guibg=#3a3a3a	gui=bold
@@ -59,7 +59,8 @@ hi DiffChange					ctermbg=237										guibg=#382a37
 "hi PmenuThumb
 "hi Question
 "hi Scrollbar
-"hi SignColumn
+hi SignColumn ctermfg=252		ctermbg=234		cterm=none		guifg=#e3e0d7	guibg=#242424	gui=none
+
 "hi SpellBad
 "hi SpellCap
 "hi SpellLocal

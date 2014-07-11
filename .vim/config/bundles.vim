@@ -51,6 +51,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'tacahiroy/ctrlp-funky'
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'kana/vim-smartinput'
+Bundle 'maxbrunsfeld/vim-yankstack'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
