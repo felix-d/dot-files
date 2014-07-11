@@ -3,7 +3,6 @@ set guifont=Monaco:h13
 
 inoremap jk <Esc>
 imap ` <Esc>
-set pastetoggle=<f6>
 noremap j gj
 noremap k gk
 nmap <leader>w :w!<cr>
@@ -107,13 +106,13 @@ map <Leader>sb :SlimuxREPLSendBuffer<CR>
 
 " hi Special         ctermfg=81  ctermbg=234
 " hi Normal          ctermfg=252 ctermbg=234
-inoremap <silent> <C-k> <Esc>/[)}\steC<"'\]>]<CR>:nohl<CR>a
-color wombat256mod
+" Escape of brackets or quotes
+inoremap <silent> <C-k> <Esc>/[)}k-enterste\steC<"'\]>]<CR>:nohl<CR>a
 
-let g:yankstack_map_keys = 0
-nmap <C-]> <Plug>yankstack_substitute_newer_paste
-nmap <C-[> <Plug>yankstack_substitute_older_paste
+color wombat256mod
 nmap <CR> o<Esc>
 " Let me fix CR behavior bith brackets, now it 
 " works with both completion and brackets
 imap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-j>"
+set pastetoggle=<f6>
+

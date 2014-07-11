@@ -1,4 +1,3 @@
-
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -51,7 +50,8 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'tacahiroy/ctrlp-funky'
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'kana/vim-smartinput'
-Bundle 'maxbrunsfeld/vim-yankstack'
+Bundle 'vim-scripts/YankRing.vim'
+" Bundle 'maxbrunsfeld/vim-yankstack'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
