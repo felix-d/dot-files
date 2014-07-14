@@ -1,3 +1,7 @@
+set nocompatible
+filetype off
+
+so ~/.vim/config/bundles.vim
 syntax on
 set guifont=Monaco:h13
 
@@ -53,7 +57,6 @@ set wildmode=list:longest,full
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-so ~/.vim/config/bundles.vim
 " so ~/.vim/config/colors.vim
 so ~/.vim/config/ctrlp.vim
 so ~/.vim/config/completion.vim

@@ -1,7 +1,6 @@
 #! /bin/zsh
-[ -z "$VUNDLE_URI" ] && VUNDLE_URI="https://github.com/gmarik/vundle.git"
-
-git_branch='3.0'
+git submodule update --init --recursive
+[ -z "$VUNDLE_URI" ] && VUNDLE_URI="https://github.com/gmarik/Vundle.vim.git"
 files=(".vim" ".vimrc" ".tmux.conf" ".zprezto")
 for file in "${files[@]}"; do
   ln -Fs "${PWD}/${file}" "${HOME}/${file}"
@@ -13,6 +12,10 @@ for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
 done
 echo "alias vim='mvim -v'\n" >> ${HOME}/.zshrc
 
-mkdir -p "{$HOME}/.vim/bundle/"
-git clone $VUNDLE_URI "$HOME/.vim/bundle/Vundle.git"
+mkdir -p "${HOME}/.vim/bundle/"
+git clone $VUNDLE_URI "${HOME}/.vim/bundle/vundle"
 vim +PluginInstall +qall
+cd ~/.vim/bundle/tern_for_vim
+npm install
+echo "You need to install YouCompleteMe with ./install.sh --clang-completer\n\
+  you may need to change python related CMake flags if running OSX 10.9\n"
