@@ -1,5 +1,5 @@
 *.dat
-bundle
+.vim/bundle
 .emacs.d/recentf
 .emacs.d/places
 #.*
