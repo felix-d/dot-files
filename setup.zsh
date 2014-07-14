@@ -1,5 +1,9 @@
 #! /bin/zsh
-git submodule update --init --recursive
+root_dir = "${PWD}"
+cd "${PWD}"/.zprezto
+git pull origin master
+cd root_dir
+
 [ -z "$VUNDLE_URI" ] && VUNDLE_URI="https://github.com/gmarik/Vundle.vim.git"
 files=(".vim" ".vimrc" ".tmux.conf" ".zprezto")
 for file in "${files[@]}"; do
