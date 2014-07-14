@@ -1,5 +1,5 @@
 #! /bin/zsh
-root_dir = "${PWD}"
+root_dir="${PWD}"
 cd "${PWD}"/.zprezto
 git pull origin master
 cd root_dir
