@@ -1,11 +1,8 @@
 #! /bin/zsh
-root_dir = "${PWD}"
-cd "${PWD}"/.zprezto
-git pull origin master
-cd root_dir
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${HOME}/.zprezto"
 
 [ -z "$VUNDLE_URI" ] && VUNDLE_URI="https://github.com/gmarik/Vundle.vim.git"
-files=(".vim" ".vimrc" ".tmux.conf" ".zprezto")
+files=(".vim" ".vimrc" ".tmux.conf")
 for file in "${files[@]}"; do
   ln -Fs "${PWD}/${file}" "${HOME}/${file}"
 done

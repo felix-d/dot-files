@@ -15,3 +15,5 @@
 .emacs.d/backups/
 .emacs.d/projectile.cache
 .emacs.d/projectile-book*
+.zprezto
+
