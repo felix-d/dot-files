@@ -34,7 +34,8 @@ set laststatus=2
 set statusline+=%F
 set noswapfile
 set foldlevelstart=10
-set autoindent                    " set auto indent
+set nocindent smartindent                    " set auto indent
+filetype indent on
 set ts=2                          " set indent to 2 spaces
 set wildmenu
 set wildmode=longest:full,full
@@ -90,7 +91,7 @@ let g:pymode_lint_on_fly = 1
 
 "Config syntastic
 let g:syntastic_enable_signs=1
-let g:syntastic_javascript_checkers = ['jslint']
+let g:syntastic_javascript_checkers = ['jshint']
 
 "Backup config
 set backup
@@ -110,12 +111,28 @@ map <Leader>sb :SlimuxREPLSendBuffer<CR>
 " hi Special         ctermfg=81  ctermbg=234
 " hi Normal          ctermfg=252 ctermbg=234
 " Escape of brackets or quotes
-inoremap <silent> <C-k> <Esc>/[)}k-enterste\steC<"'\]>]<CR>:nohl<CR>a
+" inoremap <silent> <C-k> <Esc>/[)}k-enterste\steC<"'\]>]<CR>:nohl<CR>a
 
-color wombat256mod
+" let g:zenburn_high_Contrast = 1
+" color zenburn
+
+set background=dark
+let g:gruvbox_contrast='hard'
+colorscheme gruvbox
+" Weird bug with the color scheme, i need to source it after calling it
+so ~/.vim/bundle/gruvbox/colors/gruvbox.vim
 nmap <CR> o<Esc>
 " Let me fix CR behavior bith brackets, now it 
 " works with both completion and brackets
-imap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-j>"
+" imap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-j>"
 set pastetoggle=<f6>
+".vimrc
+
+  map <c-f> :call JsBeautify()<cr>
+  " or
+  autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+  " for html
+  autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+  " for css or scss
+  autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 

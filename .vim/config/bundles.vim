@@ -1,4 +1,4 @@
-set rtp+=~/.vim/bundle/vundle
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
@@ -35,13 +35,18 @@ Bundle 'ervandew/supertab'
 
 "JavaScript
 Bundle 'jelera/vim-javascript-syntax'
+" Bundle 'vim-scripts/JavaScript-Indent'
 Bundle 'pangloss/vim-javascript'
+Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'maksimr/vim-jsbeautify'
 Bundle 'othree/javascript-libraries-syntax.vim'
 Bundle 'marijnh/tern_for_vim'
 Bundle 'myhere/vim-nodejs-complete'
+Bundle 'claco/jasmine.vim'
+Bundle 'matthewsimo/angular-vim-snippets'
 "HTML
-Bundle 'amirh/HTML-AutoCloseTag'
+" Bundle 'amirh/HTML-AutoCloseTag'
+Bundle 'othree/html5.vim'
 
 "CSS
 Bundle 'hail2u/vim-css3-syntax'
@@ -49,9 +54,9 @@ Bundle 'hail2u/vim-css3-syntax'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tacahiroy/ctrlp-funky'
 Bundle 'christoomey/vim-tmux-navigator'
-Bundle 'kana/vim-smartinput'
+" Bundle 'kana/vim-smartinput'
 Bundle 'vim-scripts/YankRing.vim'
-" Bundle 'maxbrunsfeld/vim-yankstack'
-
+Bundle 'digitaltoad/vim-jade'
+Bundle 'morhetz/gruvbox'
 call vundle#end()            " required
 filetype plugin indent on    " required
